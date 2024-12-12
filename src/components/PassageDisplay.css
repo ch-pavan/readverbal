@@ -14,6 +14,19 @@
   align-items: flex-start; /* Align content to the left */
   gap: 20px; /* Add consistent spacing between elements */
 }
+.streak-container {
+  position: absolute;
+  top: 10px;
+  right: 80px; /* Positioned slightly to the left of the dashboard icon */
+  background-color: #ffffff;
+  color: #333;
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
 
 .page-container {
   position: relative;

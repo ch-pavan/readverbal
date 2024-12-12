@@ -20,10 +20,43 @@ const PassageDisplay = () => {
   const [isEssayCompleted, setIsEssayCompleted] = useState(false);
   const [nextEssayId, setNextEssayId] = useState(null); // To store the next essay ID
 
+
+  // Fetch user data (including streak) from backend
+  const [userData, setUserData] = useState({
+    streak: { current: 0, lastActiveDate: null },
+    completedEssays: [],
+  });
+
   // Timer and Deviation
   const [startTime, setStartTime] = useState(null); // Start time of passage
   const [timeElapsed, setTimeElapsed] = useState(0); // Live timer
   const [totalTime, setTotalTime] = useState(0); // Total time for the essay
+
+   // Fetch the user's data for streak, etc.
+   useEffect(() => {
+    const fetchUserData = async () => {
+      try {
+        const response = await axios.get('https://verbal-backend-0cao.onrender.com/api/users/me', {
+          headers: {
+            Authorization: `Bearer ${localStorage.getItem('token')}`,
+          },
+        });
+        setUserData({
+          streak: response.data?.streak || { current: 0, lastActiveDate: null },
+          completedEssays: response.data?.completedEssays || [],
+        });
+      } catch (err) {
+        console.error('Error fetching user data:', err);
+        setUserData({
+          streak: { current: 0, lastActiveDate: null },
+          completedEssays: [],
+        });
+      }
+    };
+
+    fetchUserData();
+  }, []);
+
 
   // Fetch a passage based on passageId
   const fetchPassage = async () => {
@@ -198,6 +231,10 @@ const PassageDisplay = () => {
 
   return (
     <div className="page-container">
+      {/* Streak Container fetched from the backend */}
+      <div className="streak-container">
+        🔥 {userData.streak?.current || 0}-day Streak
+      </div>
       {/* Dashboard Icon */}
       <div className="dashboard-icon" onClick={() => navigate('/dashboard')}>
         <FaUser />
@@ -219,7 +256,7 @@ const PassageDisplay = () => {
 
               {/* Timer */}
               <div className="timer">
-                Time Elapsed: {Math.floor(timeElapsed / 60)}:{timeElapsed % 60} (mm:ss)
+                Time Elapsed: {Math.floor(timeElapsed / 60)}:{timeElapsed % 60} (mins)
                 {showRecommendedTime && passage?.recommended_time && (
                   <p className="recommended-time">
                     Recommended Time: {passage.recommended_time} minutes
