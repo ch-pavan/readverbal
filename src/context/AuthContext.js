@@ -16,14 +16,14 @@ const AuthProvider = ({ children }) => {
   }, [token]);
 
   const login = async (email, password) => {
-    const response = await axios.post('http://localhost:5000/api/auth/login', { email, password });
+    const response = await axios.post('https://verbal-backend-0cao.onrender.com/api/auth/login', { email, password });
     setUser(response.data);
     setToken(response.data.token);
     localStorage.setItem('token', response.data.token);
   };
 
   const register = async (name, email, password) => {
-    const response = await axios.post('http://localhost:5000/api/auth/register', { name, email, password });
+    const response = await axios.post('https://verbal-backend-0cao.onrender.com/api/auth/register', { name, email, password });
     setUser(response.data);
     setToken(response.data.token);
     localStorage.setItem('token', response.data.token);

@@ -17,7 +17,7 @@ const Login = () => {
       await login(email, password);
       setError('');
       const response = await axios.get(
-        'http://localhost:5000/api/essays/recommendations',
+        'https://verbal-backend-0cao.onrender.com/api/essays/recommendations',
         {
           headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
         }

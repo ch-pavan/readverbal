@@ -30,7 +30,7 @@ const PassageDisplay = () => {
     try {
       setLoading(true);
       const response = await axios.get(
-        `http://localhost:5000/api/essays/${essayId}/passages/${passageId}`,
+        `https://verbal-backend-0cao.onrender.com/api/essays/${essayId}/passages/${passageId}`,
         {
           headers: {
             Authorization: `Bearer ${localStorage.getItem('token')}`,
@@ -135,7 +135,7 @@ const PassageDisplay = () => {
         console.log(`Total time for essay: ${totalTimeSpent.toFixed(2)} minutes`);
   
         await axios.post(
-          'http://localhost:5000/api/users/mark-completed',
+          'https://verbal-backend-0cao.onrender.com/api/users/mark-completed',
           { essayId, timeSpent: totalTimeSpent },
           {
             headers: {
@@ -145,7 +145,7 @@ const PassageDisplay = () => {
         );
   
         const response = await axios.get(
-          'http://localhost:5000/api/essays/recommendations',
+          'https://verbal-backend-0cao.onrender.com/api/essays/recommendations',
           {
             headers: {
               Authorization: `Bearer ${localStorage.getItem('token')}`,

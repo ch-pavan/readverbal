@@ -16,7 +16,7 @@ const EssaysList = () => {
     const fetchEssays = async () => {
       setLoading(true);
       try {
-        const response = await axios.get('http://localhost:5000/api/essays', {
+        const response = await axios.get('https://verbal-backend-0cao.onrender.com/api/essays', {
           headers: {
             Authorization: `Bearer ${localStorage.getItem('token')}`,
           },

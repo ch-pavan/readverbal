@@ -32,7 +32,7 @@ const FavoriteTopics = () => {
   
       // Save favorite topics
       await axios.post(
-        'http://localhost:5000/api/users/favorite-topics',
+        'https://verbal-backend-0cao.onrender.com/api/users/favorite-topics',
         { topics: selectedTopics },
         {
           headers: { Authorization: `Bearer ${token}` },
@@ -41,7 +41,7 @@ const FavoriteTopics = () => {
   
       // Fetch recommendations immediately
       const response = await axios.get(
-        'http://localhost:5000/api/essays/recommendations',
+        'https://verbal-backend-0cao.onrender.com/api/essays/recommendations',
         {
           headers: { Authorization: `Bearer ${token}` },
         }

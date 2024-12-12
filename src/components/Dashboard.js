@@ -15,7 +15,7 @@ const Dashboard = () => {
   useEffect(() => {
     const fetchUserData = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/users/me', {
+        const response = await axios.get('https://verbal-backend-0cao.onrender.com/api/users/me', {
           headers: {
             Authorization: `Bearer ${localStorage.getItem('token')}`,
           },
@@ -35,7 +35,7 @@ const Dashboard = () => {
 
     const fetchRecommendations = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/essays/recommendations', {
+        const response = await axios.get('https://verbal-backend-0cao.onrender.com/api/essays/recommendations', {
           headers: {
             Authorization: `Bearer ${localStorage.getItem('token')}`,
           },
