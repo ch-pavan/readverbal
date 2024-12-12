@@ -1,0 +1,160 @@
+/* Header Section */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background: #34495e;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header .logo {
+  font-size: 1.8em;
+  font-weight: bold;
+}
+
+.header .nav a {
+  margin: 0 10px;
+  color: white;
+  font-weight: 500;
+}
+
+.header .btn-primary,
+.header .btn-secondary {
+  padding: 8px 15px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.header .btn-primary {
+  background: #3498db;
+}
+
+.header .btn-secondary {
+  background: transparent;
+  border: 2px solid white;
+}
+
+.header .btn-primary:hover {
+  background: #1f78b4;
+}
+
+.header .btn-secondary:hover {
+  background: white;
+  color: #34495e;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+  background: linear-gradient(135deg, #3498db, #8e44ad);
+  color: white;
+}
+
+.hero h1 {
+  font-size: 3em;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 1.3em;
+  color: #f8f9fa; /* Lighter shade for contrast */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2); /* Subtle shadow for readability */
+  margin-top: 15px;
+}
+
+.hero-content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+
+.hero .btn-primary {
+  background: #e74c3c;
+}
+
+/* Features Section */
+.features {
+  background: linear-gradient(to bottom, #f7f9fc, #ffffff);
+  padding: 60px 20px;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.feature-card {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: scale(1.05); /* Slight zoom */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Testimonials Section */
+.testimonials {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.testimonial-card {
+  background: #ecf0f1;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  max-width: 300px;
+  text-align: center;
+  font-style: italic;
+}
+
+.aeon-essays {
+  padding: 50px 20px;
+  background: linear-gradient(to right, #f7f9fc, #eaf3fc); /* Subtle gradient */
+  border-radius: 10px;
+  padding: 40px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+.aeon-subtext {
+  font-size: 1.1em;
+  color: #34495e;
+  margin-bottom: 20px;
+}
+
+.aeon-benefits-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.aeon-benefit {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.aeon-benefit i {
+  font-size: 1.5em;
+  color: #3498db;
+}
+
+.aeon-benefit p {
+  margin: 0;
+  font-size: 1.1em;
+  color: #2c3e50;
+}

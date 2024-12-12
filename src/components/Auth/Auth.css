@@ -1,0 +1,121 @@
+/* Full Page Styling */
+/* Full Page Styling */
+.auth-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #3498db, #8e44ad); /* Match landing page gradient */
+  padding: 20px;
+}
+
+
+/* Login Card */
+.auth-container {
+  max-width: 400px;
+  width: 100%;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  background-color: #f7f7f7;
+  text-align: center;
+  margin: 20px auto; /* Adjust vertical margin for consistency */
+}
+.auth-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #3498db, #8e44ad);
+  padding: 20px;
+}
+
+
+.auth-container h2 {
+  font-size: 1.8rem; /* Match landing page section headers */
+  color: #333; /* Consistent header color */
+  margin-bottom: 20px;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Maintain consistent spacing between form elements */
+}
+
+.form-group {
+  margin-bottom: 15px; 
+  text-align: left;
+}
+
+.input-container {
+  position: relative;
+}
+
+.input-container i {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.2em;
+  color: #888;
+}
+
+.form-group label {
+  display: block; /* Ensure the label is above the input field */
+  font-size: 0.9rem;
+  margin-bottom: 5px; /* Slight spacing between label and input */
+  color: #555;
+}
+
+.form-group input {
+  width: 100%; /* Ensure input takes up the available container width */
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+.form-group input:focus {
+  border-color: #8e44ad; /* Highlight color to match the gradient */
+  box-shadow: 0 0 4px rgba(142, 68, 173, 0.5);
+}
+
+/* Button Styling */
+.auth-button {
+  width: 100%;
+  padding: 12px;
+  background-color: #3498db;
+  color: white;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.auth-button:hover {
+  background-color: #2c80b4;
+}
+
+/* Error Message */
+.error-message {
+  color: red;
+  font-size: 0.9rem;
+  margin-bottom: 15px;
+}
+
+/* Footer */
+.auth-footer {
+  font-size: 0.9rem;
+  margin-top: 20px;
+}
+
+.auth-footer a {
+  color: #3498db;
+  text-decoration: none;
+}
+
+.auth-footer a:hover {
+  text-decoration: underline;
+}
