@@ -119,3 +119,52 @@
 .auth-footer a:hover {
   text-decoration: underline;
 }
+
+/* Media Queries for Mobile Responsiveness */
+@media (max-width: 768px) {
+  .auth-container {
+    max-width: 90%; /* Use a percentage width for smaller screens */
+    padding: 20px; /* Reduce padding */
+  }
+
+  .auth-container h2 {
+    font-size: 1.5rem; /* Reduce header font size */
+  }
+
+  .form-group label {
+    font-size: 0.8rem; /* Adjust label font size */
+  }
+
+  .form-group input {
+    font-size: 0.85rem; /* Adjust input font size */
+    padding: 8px; /* Reduce padding */
+  }
+
+  .auth-button {
+    font-size: 0.9rem; /* Adjust button font size */
+    padding: 10px; /* Reduce button padding */
+  }
+
+  .auth-footer {
+    font-size: 0.8rem; /* Reduce footer font size */
+  }
+}
+
+@media (max-width: 480px) {
+  .auth-container {
+    padding: 15px; /* Further reduce padding on very small screens */
+  }
+
+  .auth-container h2 {
+    font-size: 1.2rem; /* Further reduce header size */
+  }
+
+  .form-group input {
+    font-size: 0.8rem; /* Further adjust input font size */
+  }
+
+  .auth-button {
+    padding: 8px; /* Further reduce button padding */
+    font-size: 0.85rem;
+  }
+}

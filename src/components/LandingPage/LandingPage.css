@@ -158,3 +158,104 @@
   font-size: 1.1em;
   color: #2c3e50;
 }
+
+/* Mobile-Friendly Adjustments */
+@media (max-width: 768px) {
+  /* Header Section */
+  .header {
+    flex-direction: column; /* Stack logo and nav */
+    text-align: center;
+    padding: 10px 15px; /* Reduce padding */
+  }
+
+  .header .logo {
+    font-size: 1.5em; /* Adjust font size for smaller screens */
+  }
+
+  .header .nav a {
+    display: block; /* Stack navigation links */
+    margin: 5px 0; /* Add spacing between links */
+  }
+
+  .header .btn-primary,
+  .header .btn-secondary {
+    width: 100%; /* Full-width buttons */
+    margin-top: 10px; /* Add spacing */
+  }
+
+  /* Hero Section */
+  .hero {
+    padding: 60px 10px; /* Reduce padding */
+  }
+
+  .hero h1 {
+    font-size: 2.2em; /* Smaller font size */
+  }
+
+  .hero p {
+    font-size: 1em; /* Adjust paragraph font size */
+  }
+
+  .hero-content {
+    max-width: 100%; /* Remove max-width for better fit */
+  }
+
+  /* Features Section */
+  .features-grid {
+    grid-template-columns: 1fr; /* Single column layout */
+  }
+
+  /* Testimonials Section */
+  .testimonials {
+    flex-direction: column; /* Stack testimonials vertically */
+    align-items: center; /* Center align items */
+  }
+
+  .testimonial-card {
+    max-width: 100%; /* Full-width cards */
+  }
+
+  /* Aeon Essays Section */
+  .aeon-benefits-container {
+    gap: 10px; /* Reduce gap between benefits */
+  }
+
+  .aeon-benefit p {
+    font-size: 1em; /* Adjust text size */
+  }
+}
+
+@media (max-width: 480px) {
+  /* Header Section */
+  .header .logo {
+    font-size: 1.2em; /* Further reduce font size */
+  }
+
+  /* Hero Section */
+  .hero h1 {
+    font-size: 1.8em; /* Further reduce font size */
+  }
+
+  .hero p {
+    font-size: 0.9em; /* Smaller font size for readability */
+  }
+
+  /* Features Section */
+  .features {
+    padding: 40px 10px; /* Reduce padding */
+  }
+
+  .feature-card {
+    padding: 15px; /* Smaller card padding */
+  }
+
+  /* Testimonials Section */
+  .testimonial-card {
+    padding: 15px; /* Adjust padding */
+  }
+
+  /* Aeon Essays Section */
+  .aeon-essays {
+    padding: 30px 15px; /* Reduce padding */
+  }
+}
