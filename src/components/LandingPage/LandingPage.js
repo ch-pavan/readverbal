@@ -18,7 +18,7 @@ const LandingPage = () => {
       {/* Hero Section */}
       <section className="hero">
         <div className="hero-content">
-          <h1>Empowering You to Read Better, Think Faster</h1>
+          <h1> Read Smarter, Think Faster</h1>
           <p>Master reading comprehension with timed practice, adaptive difficulty, and daily streaks to stay consistent.</p>
         </div>
       </section>
