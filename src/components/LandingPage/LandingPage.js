@@ -47,9 +47,10 @@ const LandingPage = () => {
         </div>
       </section>
 
-
+      
       {/* Why Aeon Essays Section */}
       <section id="aeon-essays" className="aeon-essays">
+      {/*
         <h2>Why Every CAT Mentor Recommends Aeon Essays</h2>
         <p className="aeon-subtext">
           Reading Aeon essays helps CAT aspirants excel in RCs by building essential skills:
@@ -68,8 +69,9 @@ const LandingPage = () => {
             <p>Expands vocabulary naturally through exposure to complex language.</p>
           </div>
         </div>
+        */}
       </section>
-
+      
 
     </div>
   );
